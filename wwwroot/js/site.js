@@ -17,13 +17,13 @@
 			}
 			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
 			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
+			//var socket = new WebSocket(address);
+			//socket.onmessage = function (msg) {
+			//	if (msg.data == 'reload') window.location.reload();
+			//	else if (msg.data == 'refreshcss') refreshCSS();
+			//};
 			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
+				//console.log('Live reload enabled.');
 				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
 			}
 		})();
@@ -42,12 +42,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const mobileToggle = document.querySelector('.mobile-toggle');
-const navLinks = document.querySelector('.nav-links');
+//const mobileToggle = document.querySelector('.mobile-toggle');
+//const navLinks = document.querySelector('.nav-links');
 
-mobileToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-});
+//mobileToggle.addEventListener('click', () => {
+//    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+//});
 
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -91,3 +91,4 @@ $("#contactForm").on("submit", function (e) {
         }
     });
 });
+
